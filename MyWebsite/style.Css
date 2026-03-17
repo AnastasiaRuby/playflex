@@ -1,0 +1,10 @@
+body { background:#141414; color:white; font-family:sans-serif; margin:0; padding:0; }
+header { display:flex; justify-content:space-between; padding:10px 20px; background:#141414; }
+h1 { color:red; }
+#ads-section { margin:10px 0; text-align:center; }
+.movie-row { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
+.movie-item { background:#222; padding:10px; border-radius:5px; width:520px; }
+.movie-item img, .movie-item video { width:100%; border-radius:5px; }
+input, select, button { margin:5px 0; padding:5px; border-radius:3px; border:none; }
+button { background:red; color:white; cursor:pointer; }
+button:disabled { background:gray; cursor:not-allowed; }
