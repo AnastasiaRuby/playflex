@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Netflix Clone</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta charset="UTF-8">
+<title>PlayFlex</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Netflix Clone</h1>
+  <h1>PlayFlex</h1>
   <div id="user-info">
     <span id="username-display"></span>
     <button onclick="logout()">Logout</button>
   </div>
 </header>
 
-<!-- Ads Section -->
-<div id="ads-section" style="margin: 10px 0; text-align:center;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"  <!-- Replace with your AdSense ID -->
-       data-ad-slot="YYYYYYYYYY"
-       data-ad-format="auto"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div>
-
 <section id="auth-section">
   <h2>Login / Signup</h2>
   <input type="email" id="email" placeholder="Email">
   <input type="text" id="username" placeholder="Username (signup only)">
   <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Login</button>
   <button onclick="signup()">Signup</button>
+  <button onclick="login()">Login</button>
   <p id="auth-message"></p>
 </section>
 
-<section id="movie-section" style="display:none;">
+<section id="admin-section" style="display:none;">
+  <h2>Admin Panel</h2>
+  <input type="text" id="admin-title" placeholder="Series Title">
+  <input type="text" id="admin-description" placeholder="Description">
+  <input type="text" id="admin-image" placeholder="Image URL">
+  <input type="text" id="admin-video" placeholder="Video URL">
+  <label>
+    Premium Only <input type="checkbox" id="admin-premium">
+  </label>
+  <button onclick="addSeries()">Add Series</button>
+  <p id="admin-message"></p>
+</section>
+
+<section id="movie-section">
   <h2>Available Series</h2>
   <div class="movie-row"></div>
 </section>
